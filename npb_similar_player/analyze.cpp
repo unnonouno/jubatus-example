@@ -37,7 +37,7 @@ int main(int argc, char* argv[]){
             >> hbp >> strikeout >> sacrifice >> dp >> slg
             >> obp >> ops >> rc27 >> xr27;
 
-        similar_result sr = r.similar_row_from_id(NAME, pfi::lang::lexical_cast<string>(pname), 4);
+        std::vector<std::pair<std::string, float> > sr = r.similar_row_from_id(NAME, pfi::lang::lexical_cast<string>(pname), 4);
         cout << "player " << pname << " is similar to :";
         for (size_t i = 1; i < sr.size(); ++i) {
             cout << " " << sr[i].first;

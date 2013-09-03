@@ -16,7 +16,7 @@ int main(int argc, char* argv[]){
 
   for (int i = 0 ; i< 943 ; i++)
   {
-        similar_result sr = r.similar_row_from_id(NAME, pfi::lang::lexical_cast<string>(i), 10);
+        std::vector<std::pair<std::string, float> > sr = r.similar_row_from_id(NAME, pfi::lang::lexical_cast<string>(i), 10);
         cout <<  "user " << i << " is similar to :";
       for (size_t i = 1; i < sr.size(); ++i){
         cout <<  sr[i].first << ", ";
