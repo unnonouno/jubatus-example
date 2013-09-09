@@ -11,6 +11,7 @@ using std::string;
 using std::vector;
 using jubatus::common::datum;
 using jubatus::classifier::estimate_result;
+using jubatus::classifier::labeled_datum;
 
 datum make_datum(const string& hair, const string& top, const string& bottom, double height) {
   datum d;
@@ -27,9 +28,9 @@ int main() {
   int port = 9199;
   string name = "test";
 
-  jubatus::classifier::client::classifier client(host, port, 1.0, name);
+  jubatus::classifier::client::classifier client(host, port, name, 1.0);
   
-  vector<pair<string, datum> > train_data;
+  vector<labeled_datum> train_data;
   train_data.push_back(labeled_datum("male",   make_datum("short", "sweater", "jeans", 1.70)));
   train_data.push_back(labeled_datum("female", make_datum("long", "shirt", "skirt", 1.56)));
   train_data.push_back(labeled_datum("male",   make_datum("short", "jacket", "chino", 1.65)));
