@@ -9,7 +9,7 @@ using std::make_pair;
 using std::pair;
 using std::string;
 using std::vector;
-using jubatus::common::datum;
+using jubatus::client::common::datum;
 using jubatus::classifier::estimate_result;
 using jubatus::classifier::labeled_datum;
 

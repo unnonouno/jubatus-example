@@ -28,7 +28,7 @@ int main(int argc, char* argv[]){
 
   string temp_string;
   while ((ifs >> temp_string) !=0) {
-    jubatus::common::datum d;
+    jubatus::client::common::datum d;
     replace(temp_string.begin(), temp_string.end(), ',', ' ');
     istringstream iss(temp_string);
     iss >> pname >> team >> bave >> games >> pa >> atbat

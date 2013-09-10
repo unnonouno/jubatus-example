@@ -8,7 +8,7 @@
 #include <pficommon/lang/util.h>
 
 using namespace std;
-using jubatus::common::datum;
+using jubatus::client::common::datum;
 using jubatus::recommender::client::recommender;
 
 const string NAME = "recommender_ml";
