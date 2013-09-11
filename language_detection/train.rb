@@ -3,7 +3,7 @@ require 'jubatus/classifier/types'
 require 'pp'
 
 NAME = "a"
-cli = Jubatus::Classifier::Client::Classifier.new "127.0.0.1", 9199
+cli = Jubatus::Classifier::Client::Classifier.new "127.0.0.1", 9199, NAME
 
 file_list = `ls`.split(" ").grep(/_train\.txt$/)
 pp file_list
@@ -23,9 +23,9 @@ begin
     end
     next if text == ""
     text.chomp!
-    datum = Jubatus::Classifier::Datum.new [["text", text]],[]
+    datum = Jubatus::Common::Datum.new({"text" => text})
     puts "train #{label} : #{text.slice(0,60)} ..."
-    cli.train(NAME, [[label, datum]])
+    cli.train([[label, datum]])
   end
 rescue => e
   pp e
@@ -38,4 +38,4 @@ ensure
   }
 end
 
-cli.save NAME,"inner"
+cli.save "inner"
