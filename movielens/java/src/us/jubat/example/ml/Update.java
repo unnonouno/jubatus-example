@@ -43,7 +43,7 @@ public class Update {
                     }
 
                     // 3. training the model
-                    client.update_row(strAry[0], datum);
+                    client.updateRow(strAry[0], datum);
                   }
                 br.close();
           }catch(FileNotFoundException e){

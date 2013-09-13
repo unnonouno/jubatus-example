@@ -21,7 +21,7 @@ public class Analyze {
 
           // 2. Get the recommended results for every user
           for (int i=0; i<=943; i++) {
-            List<IdWithScore> rec = client.similar_row_from_id(Integer.toString(i), 10);
+            List<IdWithScore> rec = client.similarRowFromId(Integer.toString(i), 10);
          //3. ouput result
             System.out.print("audience " + Integer.toString(i) + " is similar to : " );
             for (int j=0; j<10; j++){
