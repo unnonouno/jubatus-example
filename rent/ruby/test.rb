@@ -16,11 +16,11 @@ loop do
     Readline.readline("#{s} -> ", true)
   }
   cli = Jubatus::Regression::Client::Regression.new "127.0.0.1", 9199, NAME
-  data = Jubatus::Regression::Datum.new({ "aspect" => param[4],
-                                          "space" => param[0].to_f,
-                                          "distance" => param[1].to_f,
-                                          "age" => param[2].to_f,
-                                          "stair" => param[3].to_f })
+  data = Jubatus::Common::Datum.new("aspect" => param[4],
+                                    "space" => param[0].to_f,
+                                    "distance" => param[1].to_f,
+                                    "age" => param[2].to_f,
+                                    "stair" => param[3].to_f)
   result = cli.estimate [data]
   puts "推定家賃 #{sprintf "%.2f",result[0]} 万円/月"
   puts ""

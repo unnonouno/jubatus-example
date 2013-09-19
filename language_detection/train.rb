@@ -23,7 +23,7 @@ begin
     end
     next if text == ""
     text.chomp!
-    datum = Jubatus::Common::Datum.new({"text" => text})
+    datum = Jubatus::Common::Datum.new("text" => text)
     puts "train #{label} : #{text.slice(0,60)} ..."
     cli.train([[label, datum]])
   end

@@ -8,7 +8,7 @@ recommender = Jubatus::Recommender::Client::Recommender.new "127.0.0.1", 9199, N
 n = 0
 File.open("../dat/ml-100k/u.data", "r").each{|line|
   userid, movieid, rating, mtime = line.split(' ')
-  datum = Jubatus::Common::Datum.new({movieid.to_s => rating.to_f})
+  datum = Jubatus::Common::Datum.new(movieid.to_s => rating.to_f)
   if (n % 1000 == 0)
     p n
   end

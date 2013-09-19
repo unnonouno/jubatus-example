@@ -11,22 +11,22 @@ client = Jubatus::Classifier::Client::Classifier.new(host, port, name)
 
 train_data =
   [
-   ["male",   Jubatus::Common::Datum.new({"hair" => "short", "top" => "sweater", "bottom" => "jeans", "height" => 1.70})],
-   ["female", Jubatus::Common::Datum.new({"hair" => "long",  "top" => "shirt",   "bottom" => "skirt", "height" => 1.56})],
-   ["male",   Jubatus::Common::Datum.new({"hair" => "short", "top" => "jacket",  "bottom" => "chino", "height" => 1.65})],
-   ["female", Jubatus::Common::Datum.new({"hair" => "short", "top" => "T shirt", "bottom" => "jeans", "height" => 1.72})],
-   ["male",   Jubatus::Common::Datum.new({"hair" => "long",  "top" => "T shirt", "bottom" => "jeans", "height" => 1.82})],
-   ["female", Jubatus::Common::Datum.new({"hair" => "long",  "top" => "jacket",  "bottom" => "skirt", "height" => 1.43})],
-#   ["male",   Jubatus::Common::Datum.new({"hair" => "short", "top" => "jacket",  "bottom" => "jeans", "height" => 1.76})],
-#   ["female", Jubatus::Common::Datum.new({"hair" => "long",  "top" => "sweater", "bottom" => "skirt", "height" => 1.52})],
+   ["male",   Jubatus::Common::Datum.new("hair" => "short", "top" => "sweater", "bottom" => "jeans", "height" => 1.70)],
+   ["female", Jubatus::Common::Datum.new("hair" => "long",  "top" => "shirt",   "bottom" => "skirt", "height" => 1.56)],
+   ["male",   Jubatus::Common::Datum.new("hair" => "short", "top" => "jacket",  "bottom" => "chino", "height" => 1.65)],
+   ["female", Jubatus::Common::Datum.new("hair" => "short", "top" => "T shirt", "bottom" => "jeans", "height" => 1.72)],
+   ["male",   Jubatus::Common::Datum.new("hair" => "long",  "top" => "T shirt", "bottom" => "jeans", "height" => 1.82)],
+   ["female", Jubatus::Common::Datum.new("hair" => "long",  "top" => "jacket",  "bottom" => "skirt", "height" => 1.43)],
+#   ["male",   Jubatus::Common::Datum.new("hair" => "short", "top" => "jacket",  "bottom" => "jeans", "height" => 1.76)],
+#   ["female", Jubatus::Common::Datum.new("hair" => "long",  "top" => "sweater", "bottom" => "skirt", "height" => 1.52)],
   ]
 
 client.train(train_data)
 
 test_data =
   [
-   Jubatus::Common::Datum.new({"hair" => "short", "top" => "T shirt", "bottom" => "jeans", "height" => 1.81}),
-   Jubatus::Common::Datum.new({"hair" => "long",  "top" => "shirt",   "bottom" => "skirt", "height" => 1.50}),
+   Jubatus::Common::Datum.new("hair" => "short", "top" => "T shirt", "bottom" => "jeans", "height" => 1.81),
+   Jubatus::Common::Datum.new("hair" => "long",  "top" => "shirt",   "bottom" => "skirt", "height" => 1.50),
   ]
 
 results = client.classify(test_data)
