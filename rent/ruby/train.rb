@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 require 'jubatus/regression/client'
-require 'jubatus/regression/types'
 require 'yaml'
 require 'pp'
 

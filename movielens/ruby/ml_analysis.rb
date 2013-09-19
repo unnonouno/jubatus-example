@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require "jubatus/recommender/client"
-require "jubatus/recommender/types"
 require "pp"
 
 recommender = Jubatus::Recommender::Client::Recommender.new "127.0.0.1", 9199, "movie_len"

@@ -5,7 +5,6 @@ port = 9199
 name = "test"
 
 require 'jubatus/classifier/client'
-require 'jubatus/classifier/types'
 
 client = Jubatus::Classifier::Client::Classifier.new(host, port, name)
 

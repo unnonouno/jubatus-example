@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 require 'jubatus/classifier/client'
-require 'jubatus/classifier/types'
 require 'readline'
 require 'pp'
 

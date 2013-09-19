@@ -8,7 +8,6 @@ $name = "test"
 require 'json'
 
 require 'jubatus/classifier/client'
-require 'jubatus/classifier/types'
 
 def train(client)
   # prepare training data
